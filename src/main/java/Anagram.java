@@ -20,5 +20,12 @@ public class Anagram {
 		ArrayList<String> singleStr = new ArrayList<String>();
 		singleStr.add("lit");
 		a.isAnagram("list", singleStr);
+
+		ArrayList<String> multStr = new ArrayList<String>();
+		multStr.add("it");
+		multStr.add("is");
+		multStr.add("lit");
+		multStr.add("nope");
+		a.isAnagram("list", multStr);
 	}
 }
