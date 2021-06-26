@@ -13,6 +13,7 @@ public class AnagramTets {
 	private ArrayList<String> singleStr;
 	private ArrayList<String> multStr;
 	private ArrayList<String> multStr2;
+	private ArrayList<String> multStr3;
 
 	@Before
 	public void setup() {
@@ -29,6 +30,12 @@ public class AnagramTets {
 		multStr2.add("is");
 		multStr2.add("lit");
 		multStr2.add("otter");
+		multStr3 = new ArrayList<String>();
+		multStr3.add("it");
+		multStr3.add("is");
+		multStr3.add("or");
+		multStr3.add("otter");
+		multStr3.add("to");
 	}
 
 	@Test
@@ -42,8 +49,13 @@ public class AnagramTets {
 	}
 
 	@Test
-	public void testAnagramDiplicateLetters() {
+	public void testAnagramDuplicateLetters() {
 		assertThat(a.isAnagram("lottery", multStr2)).containsOnly("otter");
+	}
+
+	@Test
+	public void testAnagramsDuplicateLetters() {
+		assertThat(a.isAnagram("lottery", multStr3)).containsOnly("otter", "or", "to");
 	}
 
 }
