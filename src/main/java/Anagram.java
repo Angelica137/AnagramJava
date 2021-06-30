@@ -22,7 +22,6 @@ public class Anagram {
 				}
 			}
 		}
-		System.out.println(answer);
 		return answer;
 	}
 
