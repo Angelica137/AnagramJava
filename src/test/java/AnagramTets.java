@@ -33,29 +33,29 @@ public class AnagramTets {
 		multStr3 = new ArrayList<String>();
 		multStr3.add("it");
 		multStr3.add("is");
-		multStr3.add("or");
-		multStr3.add("otter");
+		multStr3.add("enlist");
+		multStr3.add("booo");
 		multStr3.add("to");
 	}
 
 	@Test
 	public void testAnagramReturnsAnagram() {
-		assertThat(a.isAnagram("list", singleStr)).containsOnly("lit");
+		assertThat(a.isAnagram("list", singleStr)).isEmpty();
 	}
 
 	@Test
 	public void testAnagramReturnsAngrams() {
-		assertThat(a.isAnagram("list", multStr)).containsOnly("it", "is", "lit");
+		assertThat(a.isAnagram("list", multStr)).isEmpty();
 	}
 
 	@Test
 	public void testAnagramDuplicateLetters() {
-		assertThat(a.isAnagram("lottery", multStr2)).containsOnly("otter");
+		assertThat(a.isAnagram("lottery", multStr2)).containsOnly("terytol");
 	}
 
 	@Test
 	public void testAnagramsDuplicateLetters() {
-		assertThat(a.isAnagram("lottery", multStr3)).containsOnly("otter", "or", "to");
+		assertThat(a.isAnagram("listen", multStr3)).containsOnly("enlist");
 	}
 
 }
