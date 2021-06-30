@@ -26,17 +26,4 @@ public class Anagram {
 		return answer;
 	}
 
-	public static void main(String[] args) {
-		Anagram a;
-		a = new Anagram();
-		ArrayList<String> multStr3;
-		multStr3 = new ArrayList<String>();
-		multStr3.add("it");
-		multStr3.add("is");
-		multStr3.add("enlist");
-		multStr3.add("booo");
-		multStr3.add("to");
-
-		a.isAnagram("listen", multStr3);
-	}
 }
