@@ -30,6 +30,7 @@ public class AnagramTets {
 		multStr2.add("is");
 		multStr2.add("lit");
 		multStr2.add("otter");
+		multStr2.add("yrettol");
 		multStr3 = new ArrayList<String>();
 		multStr3.add("it");
 		multStr3.add("is");
@@ -50,7 +51,7 @@ public class AnagramTets {
 
 	@Test
 	public void testAnagramDuplicateLetters() {
-		assertThat(a.isAnagram("lottery", multStr2)).containsOnly("terytol");
+		assertThat(a.isAnagram("lottery", multStr2)).containsOnly("yrettol");
 	}
 
 	@Test
